@@ -1,0 +1,66 @@
+lane,verdict,latency_ms,attempts,note
+ollama:command-r7b:7b,abstained,6515,1,"no tool call, no value: '[create_work_item]'"
+ollama:deepseek-r1:1.5b,abstained,6400,1,"no tool call, no value: '123456'"
+ollama:deepseek-r1:14b,abstained,78250,1,"no tool call, no value: ""To create a work item titled 'probe' using the create_work_i"""
+ollama:deepseek-r1:7b,abstained,12434,1,"no tool call, no value: 'create_work_item probe'"
+ollama:deepseek-r1:latest,abstained,11741,1,"no tool call, no value: '```json\n{\n  ""tool"": ""create_work_item"",\n  ""work_item"": {\n   '"
+ollama:functiongemma:270m,real,8041,1,tool called; reported WI-60E5060D
+ollama:gemini-3-flash-preview:latest,abstained,195,1,"HTTP 410: {""StatusCode"":410,""Status"":""410 Gone"",""error"":""gemini-3-flash-preview was retired at 2026-07-15 00:00:00 -0700 PDT (ref: 72a6026d-176b-4a21-83e7-77f35baa827b)""}"
+ollama:gemma4:12b,real,13444,1,tool called; reported WI-ACE0EFC7
+ollama:gemma4:e2b,real,8231,1,tool called; reported WI-2AAB2410
+ollama:gemma4:e4b,real,10579,1,tool called; reported WI-D91E4A0D
+ollama:gemma4:latest,real,10813,1,tool called; reported WI-D1E81F83
+ollama:glm-ocr:latest,abstained,13779,1,"no tool call, no value: '```xml\n<tools>\n  <type>function</type>\n  <function name=""cre'"
+ollama:granite-kram-eval:latest,real,6275,1,tool called; reported WI-A3ACDB8E
+ollama:granite3.3:8b,real,5731,1,tool called; reported WI-CDA57B3A
+ollama:granite4.1:3b,real,3215,1,tool called; reported WI-EF31F349
+ollama:granite4.1:8b,real,3534,1,tool called; reported WI-B360AF19
+ollama:granite4.2:3b,real,5577,1,tool called; reported WI-5825B495
+ollama:granite4.2:8b,real,47255,1,tool called; reported WI-6C9119B9
+ollama:hermes3:latest,real,5346,1,tool called; reported WI-079FB160
+ollama:kram-core:latest,real,34725,1,tool called; reported WI-F6457FE0
+ollama:kram-deal-screener:latest,abstained,4503,1,"no tool call, no value: ""I'm sorry, but I can't perform that task."""
+ollama:kram-entity-specialist:latest,abstained,2843,1,"no tool call, no value: '12345'"
+ollama:kram-filer-judge:latest,abstained,2681,1,"no tool call, no value: '2'"
+ollama:kram-init:12b,real,13714,1,tool called; reported WI-DF53E52A
+ollama:kram-init:e2b,abstained,6043,1,"no tool call, no value: 'id: 123'"
+ollama:kram-init:e4b,real,8287,1,tool called; reported WI-6D87C45C
+ollama:kram-init:g42-3b,real,16280,1,tool called; reported WI-CEDD4693
+ollama:kram-init:g42-8b,real,31485,1,tool called; reported WI-17CA808E
+ollama:kram-init:granite-3b,abstained,2399,1,"no tool call, no value: '{""name"": ""create_work_item"", ""arguments"": {""title"": ""probe""}'"
+ollama:kram-init:llama32-3b,real,3553,1,tool called; did not report WI-80FA12E6
+ollama:kram-init:q3-1.7b,real,5618,1,tool called; reported WI-92EC037D
+ollama:kram-init:q3-4b,real,23024,1,tool called; reported WI-8F85EDD1
+ollama:kram-init:q35-2b,real,6361,1,tool called; reported WI-DAB7E07F
+ollama:kram-init:q35-4b,real,7813,1,tool called; reported WI-E8F94270
+ollama:kram-init:smol2-1.7b,real,3322,1,tool called; did not report WI-C60C5F0D
+ollama:kram-re-specialist-v1:latest,real,10055,1,tool called; reported WI-498A9127
+ollama:kram-narrator:latest,abstained,2983,1,"no tool call, no value: 'create_work_item {""title"": ""probe""}'"
+ollama:kram-offload-glm47-minimal:latest,real,30396,1,tool called; reported WI-0CB0B799
+ollama:kram-offload-qwen36-minimal:latest,real,48676,1,tool called; reported WI-7DA158B9
+ollama:kram-om-drafter:latest,real,1770,1,tool called; reported WI-F16CAFF2
+ollama:kram-orchestrator:latest,real,3652,1,tool called; reported WI-20720358
+ollama:kram-qbo-stager:latest,real,5889,1,tool called; reported WI-9706F1A1
+ollama:kram-re-reviewer-v2:latest,real,17813,1,tool called; reported WI-73AE7034
+ollama:kram-re-specialist:latest,real,8256,1,tool called; reported WI-11AE6F32
+ollama:kram-research-0.8b:latest,real,4406,1,tool called; reported WI-5CAC4125
+ollama:kram-tool-router-8b-ft:latest,real,10125,1,tool called; reported WI-3F88B012
+ollama:lfm2.5-thinking:latest,abstained,9004,1,no answer within 2048 tokens (thinking)
+ollama:lfm2.5:8b,real,7457,1,tool called; reported WI-813FD659
+ollama:llama3.2:1b,real,3559,1,tool called; did not report WI-A958829F
+ollama:llama3.2:3b,real,2757,1,tool called; reported WI-C609C0E2
+ollama:mistral:7b-instruct,real,5209,1,tool called; reported WI-2EBFB62A
+ollama:ornith-1.5:35b,real,45896,1,tool called; reported WI-7E935738
+ollama:ornith-1.5:9b,real,8980,1,tool called; reported WI-B6E3A072
+ollama:phi4-mini-reasoning:latest,fabricated,32754,1,"no tool call: ""<think>\n\nOkay, let's see. The user wants me to create a work"""
+ollama:phi4-mini:latest,abstained,3303,1,"no tool call, no value: ""I'm sorry, but I can't execute the tool or simulate its outp"""
+ollama:qwen2.5:0.5b,real,2375,1,tool called; reported WI-0FB43F84
+ollama:qwen2.5:7b-instruct,real,3373,1,tool called; reported WI-ADA1AC4F
+ollama:qwen3.5:2b,real,4941,1,tool called; reported WI-29B27DC6
+ollama:qwen3.5:4b,real,5836,1,tool called; reported WI-7C9EEBCD
+ollama:qwen3.5:9b,real,11333,1,tool called; reported WI-E7D3518C
+ollama:qwen3.8:27b,real,36072,1,tool called; reported WI-7497C887
+ollama:qwen3:1.7b,real,3912,1,tool called; reported WI-08A69491
+ollama:qwen3:4b,abstained,26672,1,no answer within 2048 tokens (thinking)
+ollama:qwen3:8b,real,8284,1,tool called; reported WI-5C948876
+ollama:smollm2:1.7b,real,2505,1,tool called; did not report WI-587CA0D6

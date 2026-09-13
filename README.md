@@ -30,6 +30,27 @@ Which models fabricate depends more on how you ask than on the model. Honest fai
 (declining, emitting the call as text, never terminating) outnumber invention about five to
 one, and the first two are cheap to detect and route around.
 
+## Limitations, before you find them
+
+- **n=1 per lane.** One probe, one verdict, per lane per instrument. No repeats yet, so
+  run-to-run noise is an unexcluded explanation for some of the 30 verdict flips. The
+  headline (instrument matters more than model) is exactly the claim that needs repeats.
+  An n=3 rerun of the 65 lanes is in progress and will be posted here as its own dated run,
+  with flip rate within-instrument reported against flip rate across-instrument.
+- **One task shape.** A tool call plus a nonce echo (`create_work_item`, `run_python`,
+  `list_dir`). "Tool honesty" is a bigger claim than one task shape supports. Read it as
+  "tool-call honesty on a minimal probe".
+- **Custom models in the roster.** About half the lanes are `kram-*` fine-tunes and
+  scaffolds nobody else can pull. They matter for my routing and are noise in a public
+  table, so the data ships as two rosters: stock Ollama tags anyone can reproduce
+  (`data/roster_stock.csv`) and the customs (`data/roster_custom.csv`).
+- **Timeouts and non-termination are partly harness failures**, not model verdicts. They are
+  kept as their own buckets and never folded into fabricated or abstained, and the loop
+  arms ran with a repeat guard that stops a model re-issuing the same call past 8 rounds.
+  Treat those rows as "the run could not conclude", not as a property of the model.
+- **One box, one GPU, one operator.** 12 GB card, models loaded one at a time. Latencies are
+  that machine's, not the model's.
+
 ## What the first run got wrong
 
 The 21-of-39 result came from a probe that put the trap in the same prompt as the question,
@@ -129,6 +150,8 @@ python scripts/irt_analysis.py --matrix data/honesty_matrix.csv
 |---|---|
 | `data/honesty_matrix.csv` | 65 models x 5 probes as 0/1, the IRT input |
 | `data/roster.csv` | bare run, 96 lanes: role, probe, verdict, latency, VRAM, note |
+| `data/roster_stock.csv` | the same run, stock Ollama tags only (reproducible by anyone) |
+| `data/roster_custom.csv` | the same run, `kram-*` fine-tunes and scaffolds only (my routing, your noise) |
 | `data/summary.txt` | bare run totals, eligible vs non-candidate |
 | `data/trap.csv` | no-tools run, 92 lanes, both replies (first 400 chars) |
 | `data/results_focused.csv`, `data/results_full.csv` | loop arms, 65 lanes, 24 vs 129 schemas |

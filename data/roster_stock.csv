@@ -1,0 +1,51 @@
+lane,role,probe,verdict,latency_ms,vram_gb,attempts,note
+ollama:command-r7b:7b,agentic,agentic,abstained,7026,5.6,1,"no tool call, no value: '[create_work_item]'"
+ollama:deepseek-r1:1.5b,agentic,agentic,abstained,6944,1.7,1,"no tool call, no value: '123456'"
+ollama:deepseek-r1:14b,agentic,agentic,abstained,63007,,1,"no tool call, no value: ""To create a work item titled 'probe' using the create_work_i"""
+ollama:deepseek-r1:7b,agentic,agentic,abstained,13186,5.7,1,"no tool call, no value: 'create_work_item probe'"
+ollama:deepseek-r1:latest,agentic,agentic,abstained,11796,7.6,1,"no tool call, no value: '```json\n{\n  ""tool"": ""create_work_item"",\n  ""work_item"": {\n   '"
+ollama:gemini-3-flash-preview:latest,agentic,agentic,abstained,81,,1,"HTTP 410: {""StatusCode"":410,""Status"":""410 Gone"",""error"":""gemini-3-flash-preview was retired at 2026-07-15 00:00:00 -0700 PDT (ref: 3ec803d1-7416-4690-b883-3663eec2282b)""}"
+ollama:glm-ocr:latest,agentic,agentic,abstained,15995,3.0,1,"no tool call, no value: '```xml\n<tools>\n  <type>function</type>\n  <function name=""cre'"
+ollama:lfm2.5-thinking:latest,agentic,agentic,abstained,10150,1.1,1,no answer within 2048 tokens (thinking)
+ollama:phi4-mini-reasoning:latest,agentic,agentic,abstained,33376,5.7,1,"no tool call, no value: ""<think>\n\nOkay, let's see. The user wants me to create a work"""
+ollama:phi4-mini:latest,agentic,agentic,abstained,4151,5.0,1,"no tool call, no value: ""I'm sorry, but I can't execute the tool or simulate its outp"""
+ollama:qwen3:4b,agentic,agentic,abstained,30735,5.3,1,no answer within 2048 tokens (thinking)
+ollama:qwen3:0.6b,agentic,agentic,fabricated,3036,2.7,1,"invented an id without calling the tool: '{""id"": ""1234567890""}' (reclassified at finalize)"
+ollama:functiongemma:270m,agentic,agentic,real,9959,0.4,1,tool called; reported WI-76BF1F33
+ollama:gemma4:12b,agentic,agentic,real,13668,7.9,1,tool called; reported WI-5D0A76AD
+ollama:gemma4:e2b,agentic,agentic,real,9160,1.9,1,tool called; reported WI-86033ABB
+ollama:gemma4:e4b,agentic,agentic,real,11281,3.3,1,tool called; reported WI-915171FA
+ollama:gemma4:latest,agentic,agentic,real,11883,3.3,1,tool called; reported WI-3885E1BB
+ollama:granite3.3:8b,agentic,agentic,real,5079,8.0,1,tool called; reported WI-034D9995
+ollama:granite4.1:3b,agentic,agentic,real,3555,3.7,1,tool called; reported WI-7BB931DA
+ollama:granite4.1:8b,agentic,agentic,real,5106,8.2,1,tool called; reported WI-B5F4FC66
+ollama:granite4.2:3b,agentic,agentic,real,5775,3.7,1,tool called; reported WI-D523E00A
+ollama:granite4.2:8b,agentic,agentic,real,129126,8.2,1,tool called; reported WI-E42D8334
+ollama:hermes3:latest,agentic,agentic,real,5436,6.8,1,tool called; reported WI-8F519EC0
+ollama:lfm2.5:8b,agentic,agentic,real,7343,5.5,1,tool called; reported WI-42B8E9FA
+ollama:llama3.2:1b,agentic,agentic,real,3027,2.1,1,tool called; reported WI-66C791DA
+ollama:llama3.2:3b,agentic,agentic,real,3498,4.3,1,tool called; reported WI-02A1A4A9
+ollama:mistral:7b-instruct,agentic,agentic,real,5479,6.8,1,tool called; reported WI-DD083EF7
+ollama:ornith-1.5:35b,agentic,agentic,real,31646,9.9,1,tool called; reported WI-91D8D301
+ollama:ornith-1.5:9b,agentic,agentic,real,8780,6.2,1,tool called; reported WI-5C5482CE
+ollama:qwen2.5:0.5b,agentic,agentic,real,2995,0.7,1,tool called; reported WI-22E340BC
+ollama:qwen2.5:7b-instruct,agentic,agentic,real,7253,5.7,1,tool called; reported WI-CAE2DB43
+ollama:qwen3.5:0.8b,agentic,agentic,real,4257,1.4,1,tool called; reported WI-30640EA4
+ollama:qwen3.5:2b,agentic,agentic,real,6453,2.7,1,tool called; reported WI-8694BE6E
+ollama:qwen3.5:4b,agentic,agentic,real,6893,3.8,1,tool called; reported WI-9D5DC23C
+ollama:qwen3.5:9b,agentic,agentic,real,10492,6.1,1,tool called; reported WI-E4AE2C13
+ollama:qwen3.8:27b,agentic,agentic,real,44676,8.2,1,tool called; reported WI-5362E7D5
+ollama:qwen3:1.7b,agentic,agentic,real,4168,3.4,1,tool called; reported WI-97F83702
+ollama:qwen3:8b,agentic,agentic,real,9964,7.6,1,tool called; reported WI-4D3F2956
+ollama:smollm2:1.7b,agentic,agentic,real,2546,2.8,1,tool called; did not report WI-D3287DC2
+ollama:codeqwen:7b,code,code,abstained,70,,1,no tool template (Ollama 400: does not support tools)
+ollama:deepcoder:14b,code,code,abstained,357158,10.6,1,no answer within 2048 tokens (thinking)
+ollama:qwen2.5-coder:3b,code,code,abstained,3626,2.8,1,"no tool call, no value: '{""name"": ""run_python"", ""arguments"": {""code"": {""type"": ""strin'"
+ollama:qwen2.5-coder:1.5b,code,code,fabricated,2801,1.7,1,no tool call: '42'
+ollama:qwen2.5-coder:7b,code,code,fabricated,4727,5.7,1,no tool call: '42'
+ollama:qwen2.5-coder:7b-instruct,code,code,fabricated,3520,5.7,1,no tool call: '42'
+ollama:sqlcoder:latest,specialist,agentic,abstained,46,,1,no tool template (Ollama 400: does not support tools)
+ollama:minicpm-v4.5:8b,vision,vision,real,7200,7.5,1,read 44P9
+ollama:minicpm-v4.5:latest,vision,vision,real,4815,7.5,1,read 9XJP
+ollama:minicpm-v4.6:latest,vision,vision,real,5231,1.0,1,read 7K9A
+ollama:qwen2.5vl:7b,vision,vision,real,8595,6.5,1,read 3JJF

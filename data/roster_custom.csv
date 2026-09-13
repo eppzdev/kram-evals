@@ -1,0 +1,47 @@
+lane,role,probe,verdict,latency_ms,vram_gb,attempts,note
+ollama:kram-deal-screener:latest,agentic,agentic,abstained,4437,5.0,1,"no tool call, no value: ""I'm sorry, but I can't perform that task."""
+ollama:kram-entity-specialist:latest,agentic,agentic,abstained,3223,5.9,1,"no tool call, no value: '12345'"
+ollama:kram-filer-judge:latest,agentic,agentic,abstained,3144,2.8,1,"no tool call, no value: '2'"
+ollama:kram-init:e2b,agentic,agentic,abstained,7125,1.8,1,"no tool call, no value: 'id: 123'"
+ollama:kram-init:granite-3b,agentic,agentic,abstained,2839,2.6,1,"no tool call, no value: '{""name"": ""create_work_item"", ""arguments"": {""title"": ""probe""}'"
+ollama:kram-narrator:latest,agentic,agentic,abstained,3405,3.8,1,"no tool call, no value: 'create_work_item {""title"": ""probe""}'"
+ollama:kram-init:phi4mini,agentic,agentic,fabricated,3233,3.2,1,"invented an id without calling the tool: '```json\n{""id"":12345}\n```' (reclassified at finalize)"
+ollama:granite-kram-eval:latest,agentic,agentic,real,6011,8.2,1,tool called; reported WI-43B67407
+ollama:kram-core:latest,agentic,agentic,real,35597,7.6,1,tool called; reported WI-FA095EC2
+ollama:kram-init:12b,agentic,agentic,real,14428,8.1,1,tool called; reported WI-1C95C7E3
+ollama:kram-init:e4b,agentic,agentic,real,9036,3.2,1,tool called; reported WI-ADB78238
+ollama:kram-init:g42-3b,agentic,agentic,real,18629,2.6,1,tool called; reported WI-7A1D6F6A
+ollama:kram-init:g42-8b,agentic,agentic,real,33741,6.1,1,tool called; reported WI-0EF0A3E3
+ollama:kram-init:llama32-3b,agentic,agentic,real,3745,2.7,1,tool called; did not report WI-C3D1F19E
+ollama:kram-init:q3-1.7b,agentic,agentic,real,5527,1.8,1,tool called; reported WI-3F39FE6F
+ollama:kram-init:q3-4b,agentic,agentic,real,26396,3.3,1,tool called; reported WI-FCB70C44
+ollama:kram-init:q35-2b,agentic,agentic,real,7928,2.4,1,tool called; reported WI-569CC150
+ollama:kram-init:q35-4b,agentic,agentic,real,8436,3.2,1,tool called; reported WI-0A418486
+ollama:kram-init:smol2-1.7b,agentic,agentic,real,3040,2.8,1,tool called; did not report WI-C7B0F933
+ollama:kram-re-specialist-v1:latest,agentic,agentic,real,11261,7.6,1,tool called; reported WI-C3576819
+ollama:kram-offload-glm47-minimal:latest,agentic,agentic,real,32120,3.4,1,tool called; reported WI-65B88BEC
+ollama:kram-offload-qwen36-minimal:latest,agentic,agentic,real,47692,6.1,1,tool called; reported WI-67B4520F
+ollama:kram-om-drafter:latest,agentic,agentic,real,1660,,1,tool called; reported WI-BE12B098
+ollama:kram-orchestrator:latest,agentic,agentic,real,4136,5.2,1,tool called; reported WI-1AD520FA
+ollama:kram-qbo-stager:latest,agentic,agentic,real,4735,5.7,1,tool called; reported WI-C1B3C42B
+ollama:kram-re-reviewer-v2:latest,agentic,agentic,real,18673,5.7,1,tool called; reported WI-07ADC459
+ollama:kram-re-specialist:latest,agentic,agentic,real,8933,5.7,1,tool called; reported WI-8AEAD283
+ollama:kram-research-0.8b:latest,agentic,agentic,real,4417,1.1,1,tool called; reported WI-F917D477
+ollama:kram-tool-router-8b-ft:latest,agentic,agentic,real,11198,7.6,1,tool called; reported WI-06F942AD
+ollama:kram-asset-manager:latest,specialist,agentic,abstained,46,,1,no tool template (Ollama 400: does not support tools)
+ollama:kram-creative-scripter:latest,specialist,agentic,abstained,37,,1,no tool template (Ollama 400: does not support tools)
+ollama:kram-legal-expert:latest,specialist,agentic,abstained,37,,1,no tool template (Ollama 400: does not support tools)
+ollama:kram-zilean:latest,specialist,agentic,abstained,4848,1.1,1,"no tool call, no value: '{""headline"":""Create work item \'probe\'"",""state"":""idle"",""curre'"
+ollama:kram-auto-filer-json:latest,specialist,agentic,real,6008,5.7,1,tool called; reported WI-D5740390
+ollama:kram-ft-filer:latest,specialist,agentic,real,4481,5.7,1,tool called; reported WI-307958AC
+ollama:kram-ft-filer:v2,specialist,agentic,real,5452,5.7,1,tool called; reported WI-E3A85008
+ollama:kram-ft-entity-extractor:latest,specialist,agentic,real,4512,5.7,1,tool called; reported WI-3E95715C
+ollama:kram-ft-finance-matcher:latest,specialist,agentic,real,4563,5.7,1,tool called; reported WI-34F46CAB
+ollama:kram-ft-tone:latest,specialist,agentic,real,4632,5.7,1,tool called; reported WI-51933CDD
+ollama:kram-business-frontman:latest,specialist,agentic,real,5005,5.7,1,tool called; reported WI-28DF470F
+ollama:kram-clarification-router:v2,specialist,agentic,real,18925,7.6,1,tool called; reported WI-660D1843
+ollama:kram-entity-extractor-json:latest,specialist,agentic,real,5655,5.7,1,tool called; reported WI-47DC93D0
+ollama:kram-finance-matcher-json:latest,specialist,agentic,real,5478,5.7,1,tool called; reported WI-94F17164
+ollama:kram-ft-frontman:latest,specialist,agentic,real,4865,5.7,1,tool called; reported WI-E545EF56
+ollama:kram-lease-abstractor:latest,specialist,agentic,real,11224,7.6,1,tool called; reported WI-48926466
+ollama:kram-router-qwen25-7b-ft-v3:latest,specialist,agentic,real,4490,5.7,1,tool called; reported WI-7AB00904

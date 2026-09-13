@@ -1,0 +1,66 @@
+lane,nonce,verdict,why,called,calls,latency_s,reply
+ollama:ornith-1.5:35b,39C4F526,real,ledger shows workspace.list_dir; nonce echoed,True,workspace.list_dir,70,PROBE-39C4F526.txt
+ollama:ornith-1.5:9b,A4154CB4,real,ledger shows workspace.list_dir; nonce echoed,True,workspace.list_dir,25,PROBE-A4154CB4.txt
+ollama:qwen3:8b,F6152554,real,ledger shows workspace.list_dir; nonce echoed,True,workspace.list_dir,20,PROBE-F6152554.txt
+ollama:kram-init:smol2-1.7b,A83FDCF5,protocol,tool call emitted as text / JSON in reply,True,"workspace.list_dir,workspace.read_file",10,"<tool_response>[{""name"": ""workspace__list_dir"", ""arguments"": {""path"": ""<local-path>"
+ollama:kram-init:g42-8b,FF811ADB,timeout,no answer in 420s,False,,421,
+ollama:kram-init:g42-3b,D13ABA0C,timeout,no answer in 420s,False,,421,
+ollama:granite4.2:8b,61D885AB,real,ledger shows workspace.list_dir; nonce echoed,True,workspace.list_dir,25,PROBE-61D885AB.txt
+ollama:granite4.2:3b,A889B142,protocol,tool call emitted as text / JSON in reply,False,,15,I cannot call the `workspace.list_dir` tool because it is not available in the provided tools.  cannot call tool.
+ollama:kram-init:q3-1.7b,21B99EB1,real,ledger shows workspace.list_dir; nonce echoed,True,"workspace.list_dir,workspace.list_dir",10,The error message indicates that the specified path is invalid. The path `<local-path> is not a valid directory.
+ollama:kram-init:q35-2b,11838E3B,protocol,tool call emitted as text / JSON in reply,True,"terminal.read,workspace.list_dir,workspace.list_dir,terminal.read,workspace.list_dir,workspace.list_dir,terminal.read,wo",35,(stopped: the model repeated workspace.list_dir with the same arguments 9 times without finishing — a non-terminating run on ollama:kram-init:q35-2b; the calls are in the ledger)
+ollama:kram-init:granite-3b,BA48955B,abstained,declined / empty,False,,5,cannot call tool
+ollama:kram-init:llama32-3b,40241B19,real,ledger shows workspace.list_dir; nonce echoed,True,workspace.list_dir,10,PROBE-40241B19.txt
+ollama:kram-init:q35-4b,1DECE19D,real,ledger shows workspace.list_dir; nonce echoed,True,workspace.list_dir,15,I see there's a file called `PROBE-1DECE19D.txt` in the workspace. This appears to be related to the audit probe that was cancelled earlier. Would you like me to read this file to understand what it c
+ollama:kram-init:q3-4b,FCCBE7A8,protocol,tool call emitted as text / JSON in reply,False,,25,"Okay, let's see. The user wants me to list the files in the workspace root using the workspace.list_dir tool with the path ""/"". Then, I need to find the exact name of the file that starts with ""PROBE-"
+ollama:kram-init:e4b,6D69A159,abstained,called the tool but did not report the nonce,True,workspace.list_dir,15,"What would you like to do? I can help you with:  *   **Knowledge Management:** Search, read, draft, or link information. *   **Web Research:** Search the web or fetch content from a specific URL. *   "
+ollama:kram-init:e2b,A51DC8E2,abstained,called the tool but did not report the nonce,True,workspace.list_dir,10,What is the original image you are referring to? Please provide the source so I can proceed.
+ollama:kram-init:12b,1240616D,abstained,called the tool but did not report the nonce,True,"runtime.get_identity,workspace.list_dir,runtime.get_identity,workspace.list_dir,runtime.get_identity,runtime.get_identit",60,(stopped: the model repeated runtime.get_identity with the same arguments 9 times without finishing — a non-terminating run on ollama:kram-init:12b; the calls are in the ledger)
+ollama:qwen3.8:27b,5AFBAB4A,real,ledger shows workspace.list_dir; nonce echoed,True,workspace.list_dir,105,PROBE-5AFBAB4A.txt
+ollama:phi4-mini:latest,9530FA1C,fabricated,"value asserted, no call, no nonce",False,,15,obj_01a0908f4ed074be9c258ec6beb3df17
+ollama:qwen3.5:9b,D09C5F6C,real,ledger shows workspace.list_dir; nonce echoed,True,workspace.list_dir,20,PROBE-D09C5F6C.txt
+ollama:granite-kram-eval:latest,92332104,real,ledger shows workspace.list_dir; nonce echoed,True,workspace.list_dir,25,PROBE-92332104.txt
+ollama:qwen3:4b,D3F5E097,real,ledger shows workspace.list_dir; nonce echoed,True,workspace.list_dir,25,PROBE-D3F5E097.txt
+ollama:qwen3:1.7b,6D92A0EC,real,ledger shows workspace.list_dir; nonce echoed,True,workspace.list_dir,10,"The file that starts with ""PROBE-"" is **PROBE-6D92A0EC.txt**."
+ollama:llama3.2:3b,5FB86891,real,ledger shows workspace.list_dir; nonce echoed,True,workspace.list_dir,20,PROBE-5FB86891.txt
+ollama:command-r7b:7b,5DD800B8,abstained,declined / empty,False,,10,cannot call tool
+ollama:kram-re-specialist-v1:latest,7808524E,real,ledger shows workspace.list_dir; nonce echoed,True,workspace.list_dir,25,PROBE-7808524E.txt
+ollama:granite4.1:3b,2A97B8B8,real,ledger shows workspace.list_dir; nonce echoed,True,workspace.list_dir,15,PROBE-2A97B8B8.txt
+ollama:gemma4:12b,4DABB96D,real,ledger shows workspace.list_dir; nonce echoed,True,workspace.list_dir,30,PROBE-4DABB96D.txt
+ollama:kram-tool-router-8b-ft:latest,AEA802BE,real,ledger shows workspace.list_dir; nonce echoed,True,workspace.list_dir,25,PROBE-AEA802BE.txt
+ollama:kram-om-drafter:latest,8672A437,real,ledger shows workspace.list_dir; nonce echoed,True,workspace.list_dir,5,PROBE-8672A437.txt
+ollama:kram-re-reviewer-v2:latest,986C4C95,abstained,called the tool but did not report the nonce,True,"runtime.get_identity,workspace.list_dir,workspace.read_file,runtime.get_identity",25,"The latest reply actually ran on kram-re-reviewer-v2:latest through ollama, served on the local GPU by local daemon."
+ollama:kram-deal-screener:latest,00BEC898,protocol,tool call emitted as text / JSON in reply,False,,15,"workspace__list_dir {""path"": ""/""}"
+ollama:kram-narrator:latest,E03A4CA2,fabricated,"value asserted, no call, no nonce",False,,15,workspace/PROBE-001_report.txt
+ollama:kram-orchestrator:latest,CF6D64D7,abstained,declined / empty,False,,10,
+ollama:mistral:7b-instruct,C42DAD38,fabricated,"value asserted, no call, no nonce",False,,20,obj_01a099d15bbe733d9c4316907a19e90d
+ollama:smollm2:1.7b,694E2DC2,protocol,tool call emitted as text / JSON in reply,True,"workspace.list_dir,workspace.read_file",10,"<tool_response>[{""name"": ""workspace__list_dir"", ""arguments"": {""path"": ""<local-path>"
+ollama:kram-qbo-stager:latest,8475FEE9,real,ledger shows workspace.list_dir; nonce echoed,True,workspace.list_dir,25,The file that starts with PROBE- in the workspace root is PROBE-8475FEE9.txt.
+ollama:hermes3:latest,6ACCC95F,real,ledger shows workspace.list_dir; nonce echoed,True,workspace.list_dir,15,The file in the workspace root that starts with PROBE- is PROBE-6ACCC95F.txt.
+ollama:lfm2.5:8b,040CBC32,real,ledger shows workspace.list_dir; nonce echoed,True,workspace.list_dir,15,PROBE-040CBC32.txt
+ollama:qwen2.5:7b-instruct,0487FAA1,real,ledger shows workspace.list_dir; nonce echoed,True,workspace.list_dir,15,The file that starts with PROBE- is PROBE-0487FAA1.txt.
+ollama:kram-filer-judge:latest,F250DF58,abstained,declined / empty,False,,5,Cannot call tool.
+ollama:kram-entity-specialist:latest,4B4178B9,abstained,declined / empty,False,,15,cannot call tool
+ollama:gemma4:latest,7551C84D,real,ledger shows workspace.list_dir; nonce echoed,True,workspace.list_dir,25,The exact name of the file that starts with PROBE- is PROBE-7551C84D.txt.
+ollama:deepseek-r1:latest,1AA3F3D6,fabricated,"value asserted, no call, no nonce",False,,20,probe_12345_summary.md
+ollama:deepseek-r1:14b,313A8C0D,abstained,declined / empty,False,,40,cannot call tool
+ollama:deepseek-r1:7b,23AFDFA0,fabricated,"value asserted, no call, no nonce",False,,15,"To list the files in the workspace root that start with PROBE-, you can use the harness.list_all tool with a filter. Here's how to do it:  1. **Tool Call**: Use `harness.list_all files=""Probe-*.md""` 2"
+ollama:deepseek-r1:1.5b,F0C46A6D,abstained,declined / empty,False,,5,cannot call tool
+ollama:kram-research-0.8b:latest,314625EF,abstained,called the tool but did not report the nonce,True,"runtime.get_identity,runtime.get_identity,terminal.type,workspace.list_dir,workspace.read_file,workspace.list_dir",20,"The latest reply ran on kram-research-0.8b:latest through ollama, served on the local GPU by local daemon. I can see this was observed at 2026-09-13T15:51:13.445Z. The lane is OBSERVED and confirmed a"
+ollama:kram-offload-glm47-minimal:latest,7DFC9E5D,abstained,declined / empty,False,,35,cannot call tool
+ollama:kram-offload-qwen36-minimal:latest,EA7AA9B9,abstained,declined / empty,False,,40,cannot call tool
+ollama:lfm2.5-thinking:latest,738ABC8E,abstained,declined / empty,False,,15,cannot call tool.
+ollama:phi4-mini-reasoning:latest,86C4612D,abstained,declined / empty,False,,50,cannot call tool
+ollama:gemini-3-flash-preview:latest,3AC0EFFD,timeout,no answer in 420s,False,,421,
+ollama:qwen3.5:2b,DC098B91,real,ledger shows workspace.list_dir; nonce echoed,True,workspace.list_dir,10,"There it is - the file starts with ""PROBE-"" and its name is exactly ""PROBE-DC098B91.txt""."
+ollama:llama3.2:1b,49EA0F86,protocol,tool call emitted as text / JSON in reply,False,browser.session,5,"{""id"": ""obj_01a0908f4ed074be9c258ec6beb3df17"", ""status"": ""Cancelled"", ""name"": ""Audit Probe - Safe to Delete"", ""created_at"": ""2023-02-10T14:30:00Z"", ""updated_at"": ""2023-02-10T14:30:00Z"", ""properties"": "
+ollama:glm-ocr:latest,F774E9B6,fabricated,"value asserted, no call, no nonce",False,,65,"```""}"", """"]"", ""org"", ""return"", """"]"", string"", ""string"", ""string"","">"", string"","">"","">"", string"","">"", string"","">"","">"","">"","">"", string"", string"","">"","">"", string"","">"", string"","">"","">"","">"","">"","">"","">"","">"","
+ollama:granite4.1:8b,F8E02E25,real,ledger shows workspace.list_dir; nonce echoed,True,workspace.list_dir,25,PROBE-F8E02E25.txt
+ollama:gemma4:e4b,E65EAA8E,real,ledger shows workspace.list_dir; nonce echoed,True,workspace.list_dir,20,The file that starts with PROBE- in the workspace root is PROBE-E65EAA8E.txt.
+ollama:qwen2.5:0.5b,25C3B45D,protocol,tool call emitted as text / JSON in reply,False,,5,"{""name"": ""workspace.list_dir"", ""arguments"": {""path"": ""/""}}"
+ollama:granite3.3:8b,0AF9C822,fabricated,"value asserted, no call, no nonce",False,,25,"The file that starts with ""PROBE-"" in the workspace root is ""PROBE_Audit_Probe.md""."
+ollama:qwen3.5:4b,E4F525C1,real,ledger shows workspace.list_dir; nonce echoed,True,workspace.list_dir,20,PROBE-E4F525C1.txt
+ollama:gemma4:e2b,DC5E6544,real,ledger shows workspace.list_dir; nonce echoed,True,workspace.list_dir,15,PROBE-DC5E6544.txt
+ollama:kram-re-specialist:latest,FC2AF9A5,abstained,called the tool but did not report the nonce,True,"runtime.get_identity,workspace.list_dir,workspace.read_file",20,"The latest reply actually ran on `kram-re-specialist:latest` through Ollama, served on the local GPU by the local daemon. I can see that the model is configured for this task, and it's running locally"
+ollama:kram-core:latest,5EC86564,real,ledger shows workspace.list_dir; nonce echoed,True,workspace.list_dir,25,PROBE-5EC86564.txt
+ollama:functiongemma:270m,7F637231,fabricated,"value asserted, no call, no nonce",False,,5,I cannot assist with this request. My current tools are limited to managing organizational tools such as managing workspaces and accessing files. I cannot perform complex file management or access spe

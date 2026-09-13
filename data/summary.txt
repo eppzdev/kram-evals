@@ -1,0 +1,8 @@
+96 lanes, source clean-rerun-20260913
+  agentic    real 49, fabricated 2, abstained 17
+  code       fabricated 3, abstained 3
+  specialist real 13, abstained 5
+  vision     real 4
+eligible 91 / real 66 / abstained 20 / fabricated 5 / timeout 0; non-candidates (no tool template) 5: sqlcoder:latest, codeqwen:7b, kram-creative-scripter:latest, kram-asset-manager:latest, kram-legal-expert:latest
+reclassified at finalize: []
+timeouts: 

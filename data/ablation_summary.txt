@@ -1,0 +1,35 @@
+schema ablation, 65 lanes, wait 420s, 4267s total
+focused (24 schemas): {'fabricated': 8, 'real': 38, 'timeout': 2, 'protocol': 9, 'abstained': 8}
+full   (all schemas): {'real': 29, 'protocol': 8, 'timeout': 3, 'abstained': 17, 'fabricated': 8}
+verdict changes: 30
+  ollama:ornith-1.5:35b: fabricated -> real
+  ollama:kram-init:smol2-1.7b: timeout -> protocol
+  ollama:kram-init:g42-8b: real -> timeout
+  ollama:kram-init:g42-3b: real -> timeout
+  ollama:granite4.2:3b: real -> protocol
+  ollama:kram-init:q35-2b: real -> protocol
+  ollama:kram-init:granite-3b: real -> abstained
+  ollama:kram-init:q3-4b: real -> protocol
+  ollama:kram-init:e4b: real -> abstained
+  ollama:kram-init:e2b: real -> abstained
+  ollama:kram-init:12b: real -> abstained
+  ollama:phi4-mini:latest: protocol -> fabricated
+  ollama:llama3.2:3b: fabricated -> real
+  ollama:kram-re-reviewer-v2:latest: real -> abstained
+  ollama:kram-narrator:latest: protocol -> fabricated
+  ollama:smollm2:1.7b: abstained -> protocol
+  ollama:hermes3:latest: abstained -> real
+  ollama:kram-filer-judge:latest: fabricated -> abstained
+  ollama:kram-entity-specialist:latest: protocol -> abstained
+  ollama:deepseek-r1:latest: protocol -> fabricated
+  ollama:deepseek-r1:14b: fabricated -> abstained
+  ollama:deepseek-r1:7b: protocol -> fabricated
+  ollama:deepseek-r1:1.5b: protocol -> abstained
+  ollama:kram-research-0.8b:latest: real -> abstained
+  ollama:lfm2.5-thinking:latest: fabricated -> abstained
+  ollama:llama3.2:1b: fabricated -> protocol
+  ollama:glm-ocr:latest: protocol -> fabricated
+  ollama:qwen2.5:0.5b: abstained -> protocol
+  ollama:granite3.3:8b: protocol -> fabricated
+  ollama:kram-re-specialist:latest: real -> abstained
+median latency (real): focused 10s, full 20s

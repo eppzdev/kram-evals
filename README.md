@@ -34,7 +34,7 @@ one, and the first two are cheap to detect and route around.
 
 - **n=1 per lane in the original runs.** One probe, one verdict, per lane per instrument, so
   run-to-run noise was an unexcluded explanation for the 30 verdict flips. That is now
-  tested: three bare passes over the same 65 lanes gave the same verdict 65 times out of 65
+  tested: five bare passes over the same 65 lanes gave the same verdict 65 times out of 65
   (see "Repeats" below). The loop arms are still n=1.
 - **One task shape.** A tool call plus a nonce echo (`create_work_item`, `run_python`,
   `list_dir`). "Tool honesty" is a bigger claim than one task shape supports. Read it as
@@ -76,24 +76,25 @@ emits the call as text.
 ## Repeats: within-instrument vs across-instrument (2026-09-13, evening)
 
 The obvious objection to "instrument matters more than model" is that one probe per lane
-can't separate instrument variance from run-to-run noise. So the bare probe was run three
+can't separate instrument variance from run-to-run noise. So the bare probe was run five
 more times over the same 65 agentic lanes, same settings, models unloaded between lanes.
 
 | | lanes | same verdict every time |
 |---|---|---|
-| three bare-Ollama passes | 65 | **65 (100%)** |
-| majority-of-3 vs the earlier single bare run | 65 | 64 |
-| majority-of-3 vs the loop arm, 24 schemas | 65 | 36 (29 differ, 45%) |
+| five bare-Ollama passes | 65 | **65 (100%)** |
+| majority-of-5 vs the earlier single bare run | 65 | 64 |
+| majority-of-5 vs the loop arm, 24 schemas | 65 | 36 (29 differ, 45%) |
 
-Each pass: 48 real, 16 abstained, 1 fabricated, and the same lanes each time. Run-to-run
-noise on this probe is zero at temperature 0; the 29 to 30 flips between instruments are
-the instrument. The one lane that moved against the earlier single run is
-phi4-mini-reasoning (abstained once, fabricated three times), which was already the
-trap run's worst offender. Real-answer latency across the three passes: p50 8.0 s, p90 32.5 s.
+Every pass: 48 real, 16 abstained, 1 fabricated, and the same lanes each time, 325 verdicts
+with no movement. Run-to-run noise on this probe is zero at temperature 0; the 29 to 30
+flips between instruments are the instrument. The one lane that moved against the earlier
+single run is phi4-mini-reasoning (abstained once, fabricated five times), which was already
+the trap run's worst offender. Real-answer latency across the five passes: p50 8.0 s,
+p90 33.1 s.
 
-Data: `data/n3-20260913/run1.csv`, `run2.csv`, `run3.csv`, and `stability.csv` (one row per
-lane, three verdicts, stable flag). The loop arms have not been repeated yet; when they are,
-that goes here as the next dated run.
+Data: `data/n3-20260913/run1.csv` through `run5.csv`, and `stability.csv` (one row per lane,
+five verdicts, stable flag). The loop arms have not been repeated yet; when they are, that
+goes here as the next dated run.
 
 ## Four failure buckets
 
@@ -178,7 +179,7 @@ python scripts/irt_analysis.py --matrix data/honesty_matrix.csv
 | `data/results_focused.csv`, `data/results_full.csv` | loop arms, 65 lanes, 24 vs 129 schemas |
 | `data/ablation_summary.txt` | the 30 verdict changes |
 | `data/cross_instrument.csv` | the three-way join |
-| `data/n3-20260913/` | three repeated bare passes over the 65 agentic lanes + per-lane stability |
+| `data/n3-20260913/` | five repeated bare passes over the 65 agentic lanes + per-lane stability |
 | `data/DEAD-NUMBERS.md` | numbers from the broken first run, named so they are not quoted |
 
 Fine-tuned lanes are named by base model and role (`kram-ft-*`); their training data is
